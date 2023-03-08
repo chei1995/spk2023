@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+	<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="chei">
+        <meta name="copyright" content="SPARKLE">
+        <meta itemprop="name" content="SPARKLE">
+        <meta itemprop="image" content="assets/images/logo_black.svg">
+        <meta itemprop="description" content="描述">
+        <meta property="og:title" content="SPARKLE">
+        <meta property="og:image" content="assets/images/logo_black.svg">
+        <meta property="og:description" content="描述">
+        <!--twitter-->
+        <meta name="twitter:title" content="推特標題">
+        <meta name="twitter:description" content="推特描述">
+        <title>List - SPARKLE</title>
+		<!--my CSS-->
+        <link rel="stylesheet" href="assets/style/all.css">
+		<!--jQuery-->
+        <script src="assets/js/jQuery.js"></script>
+		<!--font awesome-->
+        <link rel="stylesheet" href="assets/style/vendors/all.css">
+		<!--icons-->
+        <link rel="shortcut icon" href="assets/images/favicon/favicon.ico.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.ico.ico" />
+		<!--AOS-->
+		<link href="assets/style/vendors/aos.css" rel="stylesheet">
+		<script src="assets/js/aos.js"></script>
+    </head>
+    <style>
+        .product-type{
+            display: flex;
+        }
+		
+        .product-type .item{
+            min-width: calc(90vw / 3);
+            text-align: center;
+            min-height: calc(90vw / 3 - 74px);
+            background-color: #333333; 
+  			overflow: hidden;	
+        } 
+		.product-type .item p {
+			color: #fff;
+			top: -250px;
+			position: relative;
+			font-size: 36px;
+		}
+		.item img{
+			transition: .5s;
+			filter: opacity(.5);
+		}
+		.item:hover img{
+			transform: scale(1.2);
+			filter: opacity(1);
+		}
+		.coverfit{
+			width: 100%;
+			height: 100%;
+  			object-fit: cover;	
+
+		}
+        .product-type .item:not(:last-child) {
+            margin-right: 5px;
+        }
+        @media screen and (max-width: 768px) {
+			.product-type .item{
+				min-width: calc(90vw ); 
+				min-height: calc(90vw 74px); 
+				margin: 30px 0;
+			} 
+			.product-type{
+				flex-wrap: wrap;
+			}
+        } 
+    </style>
+    <body>
+		<div class="over-menu"></div>
+		<div id="wrap">
+			<div class="header" id="header-sroll">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="desk-menu">
+								<div class="logo">
+									<h1 class="logo-adn">
+										<a href="index.html"><svg id="logo-black" data-name="logo-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 239.28"><path d="M626.2,12.23s-14.52.64-14.52,17.54c0,16.44,14.51,17.54,14.51,17.54H731.11c2.31,0,18.14,1.56,20.9,15.37,4.34,22.14-18.73,26.22-18.73,26.22L620.56,110.74s-7.35,1.87-7.84,9.09l0,100.92c.69,10.67,13.11,11.05,13.11,11.05h29.84c12.93,0,11.94-11.38,11.94-11.38V134.78l74.88-14.32s58.32-8.43,54.83-57.71C793.62,10.47,734,12.23,734,12.23Z"/><path d="M531.56,223.67s2.83,7.82,10.54,8.14h37.64c9.29-1.39,4.93-9.79,4.93-9.79L494.81,26.28A28.42,28.42,0,0,0,467.3,7.46c-20.1,0-27.19,18.82-27.19,18.82L350.42,222s-4.1,8.4,4.9,9.79h37.92c8.37-.39,10.28-8.14,10.28-8.14L467.34,73.79Z"/><path d="M765,128.31l29,92.11s2.27,9.41-9.24,11.38H750s-10.53-.36-12.57-8.92h0L715,139.09Z"/><path d="M1051.51,209.37c0,20.93,20.34,22.38,21,22.42H1198.3s14.52-.62,14.52-17.5c0-16.45-14.52-17.57-14.52-17.57h-83.23c-9.07,0-8.58-8-8.58-8V24.17c0-12-12-12-12-12h-29.75s-13.21.42-13.21,11.94Z"/><path d="M98.72,231.8q25,0,42.73-14.26c11.79-9.54,17.69-27.63,17.69-41.06A47.46,47.46,0,0,0,141.39,139L77.11,80.86c-7.71-6.9-13-15.8-9-24.61C71.41,49.36,79.34,47,84.6,47h50.18s14.53-.61,14.53-17.53c0-16.42-14.53-17.54-14.53-17.54H68.16q-25,0-42.81,14.52C13.48,36.07,7.56,52.64,7.56,66,7.56,91.82,23,103.5,23,103.5l66.67,60.18c5.92,5.38,9.94,11,9.94,18.22,0,13.54-13.59,14.83-17.75,14.83H14.49S0,197.35,0,214.29c0,16.42,14.49,17.51,14.49,17.51Z"/><path d="M205.3,12.23s-14.52.64-14.51,17.54c0,16.44,14.51,17.54,14.51,17.54H310.2c2.28,0,18.16,1.56,20.91,15.37,4.33,22.14-18.73,26.22-18.73,26.22L199.63,110.74s-7,1.87-7.54,9v101c.63,10.67,12.83,11.05,12.83,11.05h29.81c12.93,0,12-11.38,12-11.38V134.78l74.89-14.32s58.25-8.43,54.79-57.71C372.7,10.47,313,12.23,313,12.23Z"/><path d="M1385.53,196.72h-92.78c-8.49,0-8.29-8-8.29-8V139.54h93.2s14.51-.61,14.51-17.51c0-16.44-14.51-17.55-14.51-17.55h-93.2V55.28c0-.91.33-8,8.29-8h84.91s14.51-.63,14.51-17.53c0-16.43-14.51-17.55-14.51-17.55H1250.54s-21.07,1.13-21.07,22.44v174.7c0,21.28,21.07,22.44,21.07,22.44h135s14.47-.64,14.47-17.53c0-16.44-14.47-17.56-14.47-17.56"/><path d="M1038.26,222.45l-99-124.31,74-76.79c4.11-7.31-3-9.12-3-9.12h-36.4s-6.85-.48-14.21,7.43L893.13,81.52V24.17c0-12-12-11.94-12-11.94H851.35s-10.92.46-12.83,9.34V222.26c1.76,9.07,12.84,9.55,12.84,9.55h29.74s11.67.09,12-11.39h0V141.6l9.81-10.18L980.27,228s7.14,3.81,13,3.81h43.08a4.62,4.62,0,0,0,3.72-4.76,8.92,8.92,0,0,0-1.78-4.6"/></svg></a>
+									</h1>
+								</div>
+								<nav class="box-menu">
+									<div class="menu-container">
+										<div class="menu-head">
+											<a href="#" class="e1">
+												<a href="index.html"><svg id="logo-black" data-name="logo-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 239.28"><path d="M626.2,12.23s-14.52.64-14.52,17.54c0,16.44,14.51,17.54,14.51,17.54H731.11c2.31,0,18.14,1.56,20.9,15.37,4.34,22.14-18.73,26.22-18.73,26.22L620.56,110.74s-7.35,1.87-7.84,9.09l0,100.92c.69,10.67,13.11,11.05,13.11,11.05h29.84c12.93,0,11.94-11.38,11.94-11.38V134.78l74.88-14.32s58.32-8.43,54.83-57.71C793.62,10.47,734,12.23,734,12.23Z"/><path d="M531.56,223.67s2.83,7.82,10.54,8.14h37.64c9.29-1.39,4.93-9.79,4.93-9.79L494.81,26.28A28.42,28.42,0,0,0,467.3,7.46c-20.1,0-27.19,18.82-27.19,18.82L350.42,222s-4.1,8.4,4.9,9.79h37.92c8.37-.39,10.28-8.14,10.28-8.14L467.34,73.79Z"/><path d="M765,128.31l29,92.11s2.27,9.41-9.24,11.38H750s-10.53-.36-12.57-8.92h0L715,139.09Z"/><path d="M1051.51,209.37c0,20.93,20.34,22.38,21,22.42H1198.3s14.52-.62,14.52-17.5c0-16.45-14.52-17.57-14.52-17.57h-83.23c-9.07,0-8.58-8-8.58-8V24.17c0-12-12-12-12-12h-29.75s-13.21.42-13.21,11.94Z"/><path d="M98.72,231.8q25,0,42.73-14.26c11.79-9.54,17.69-27.63,17.69-41.06A47.46,47.46,0,0,0,141.39,139L77.11,80.86c-7.71-6.9-13-15.8-9-24.61C71.41,49.36,79.34,47,84.6,47h50.18s14.53-.61,14.53-17.53c0-16.42-14.53-17.54-14.53-17.54H68.16q-25,0-42.81,14.52C13.48,36.07,7.56,52.64,7.56,66,7.56,91.82,23,103.5,23,103.5l66.67,60.18c5.92,5.38,9.94,11,9.94,18.22,0,13.54-13.59,14.83-17.75,14.83H14.49S0,197.35,0,214.29c0,16.42,14.49,17.51,14.49,17.51Z"/><path d="M205.3,12.23s-14.52.64-14.51,17.54c0,16.44,14.51,17.54,14.51,17.54H310.2c2.28,0,18.16,1.56,20.91,15.37,4.33,22.14-18.73,26.22-18.73,26.22L199.63,110.74s-7,1.87-7.54,9v101c.63,10.67,12.83,11.05,12.83,11.05h29.81c12.93,0,12-11.38,12-11.38V134.78l74.89-14.32s58.25-8.43,54.79-57.71C372.7,10.47,313,12.23,313,12.23Z"/><path d="M1385.53,196.72h-92.78c-8.49,0-8.29-8-8.29-8V139.54h93.2s14.51-.61,14.51-17.51c0-16.44-14.51-17.55-14.51-17.55h-93.2V55.28c0-.91.33-8,8.29-8h84.91s14.51-.63,14.51-17.53c0-16.43-14.51-17.55-14.51-17.55H1250.54s-21.07,1.13-21.07,22.44v174.7c0,21.28,21.07,22.44,21.07,22.44h135s14.47-.64,14.47-17.53c0-16.44-14.47-17.56-14.47-17.56"/><path d="M1038.26,222.45l-99-124.31,74-76.79c4.11-7.31-3-9.12-3-9.12h-36.4s-6.85-.48-14.21,7.43L893.13,81.52V24.17c0-12-12-11.94-12-11.94H851.35s-10.92.46-12.83,9.34V222.26c1.76,9.07,12.84,9.55,12.84,9.55h29.74s11.67.09,12-11.39h0V141.6l9.81-10.18L980.27,228s7.14,3.81,13,3.81h43.08a4.62,4.62,0,0,0,3.72-4.76,8.92,8.92,0,0,0-1.78-4.6"/></svg></a>
+											</a>
+										</div>
+										<div class="menu-header-container">
+											<ul id="cd-primary-nav" class="menu">
+												<li class="menu-item">
+													<a href="#">產品</a>
+													<ul class="sub-menu">
+														<li class="menu-item">
+															<a href="intel-list.html">Intel<sup>®</sup> Arc™ </a>
+														</li>
+														<li class="menu-item">
+															<a href="#">THUNDERBOLT / USB</a>
+															<ul class="sub-menu">
+																<li class="menu-item">
+																	<a href="product-list.html">THUNDERBOLT DOCK</a>
+																</li>
+																<li class="menu-item">
+																	<a href="product-list.html">THUNDERBOLT eGFX</a>
+																</li>
+																<li class="menu-item">
+																	<a href="product-list.html">PD POWER DOCK</a>
+																</li>
+															</ul>
+														</li>
+														<li class="menu-item">
+															<a href="#">EMBEDDED SOLUTION</a>
+															<ul class="sub-menu">
+																<li class="menu-item">
+																	<a href="product-list.html">VIDEO MATRIX SOLUTION</a>
+																</li>
+																<li class="menu-item">
+																	<a href="product-list.html">MB / ADD-ON CARD</a>
+																</li>
+																<li class="menu-item">
+																	<a href="product-list.html">FPGA</a>
+																</li>
+																<li class="menu-item">
+																	<a href="embedded-list.html">EMBEDDED GRAPHICS</a>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li class="menu-item ">
+													<a href="news.html">最新消息</a>
+												</li>
+												<li class="menu-item ">
+													<a href="about-us.html">關於我們</a>
+												</li>
+												<li class="menu-item ">
+													<a href="#">Service</a>
+														<ul class="sub-menu">
+															<li class="menu-item">
+																<a href="drivers-download.html">Drivers Download</a>
+															</li>
+															<li class="menu-item">
+																<a href="manual-download.html">Manual Download</a>
+															</li>
+															<li class="menu-item">
+																<a href="faq.html">FAQ</a>
+															</li>
+															<li class="menu-item">
+																<a href="warranty.html">Warranty</a>
+															</li>
+														</ul>
+												</li>
+												<li class="menu-item">
+													<a href="#"><i class="fas fa-globe"></i></a>
+													<ul class="sub-menu">
+														<li class="menu-item">
+															<a href="#">繁體中文</a>
+														</li>
+														<li class="menu-item">
+															<a href="#">English</a>
+														</li>
+													</ul>
+												</li>
+												<li class="line"></li>
+											</ul>
+										</div>
+									</div>
+									<div class="hamburger-menu">
+										<div class="bar"></div>
+									</div>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Slider -->
+		<div class="menu-bottom"></div>
+        <div class="banner" style="background-image: url(assets/images/products-list.jpg);">
+			<div class="slider-text">
+				<h2>EMBEDDED GRAPHICS</h2>
+			</div>
+        </div>
+        <div class="full">    
+            <div class="product-list">
+                <div class="container">
+                    <div class="product-type">
+                        <div class="item"><a href=""><img class="cover-fit" src="assets/images/AMD.png" alt=""></a></div>
+                        <div class="item"><a href=""><img class="cover-fit" src="assets/images/NVIDIA.png" alt=""></a></div>
+                        <div class="item"><a href=""><img class="cover-fit" src="assets/images/SMI.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<footer>
+			<div class="container mt-7">
+				<p>Copyright © 2021 Sparkle Computer Co., Ltd. All rights reserved.</p>
+				<ul class="flex">
+					<li><a href="legal-notice.html">法律聲明</a></li>
+					<li><a href="privacy-policy.html">隱私權政策</a></li>
+				</ul>
+			</div>
+		</footer>
+		<a class="btn-scrollTop"><i class="fas fa-angle-up"></i></a>
+		<script src="assets/js/navbar.js"></script>
+		<script src="assets/js/slider.js"></script>  
+		<script src="assets/js/all.js"></script>
+		<script src="assets/js/lan.js"></script>
+    </body>
+</html>
