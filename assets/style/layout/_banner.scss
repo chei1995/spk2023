@@ -1,0 +1,28 @@
+.banner{
+    height: $banner-height;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile{
+        height: $banner-height-mb;
+    }
+    h2, p{
+        color: #ffffff;
+    }
+    h2{
+        font-weight: bold;
+    }
+    &::after {
+        background: #00000054;
+        width: 100%;
+        height:  $banner-height;
+        content: "";
+        @include mobile{
+            height: $banner-height-mb;
+        }
+    }
+}

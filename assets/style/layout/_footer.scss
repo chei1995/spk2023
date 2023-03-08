@@ -1,0 +1,44 @@
+footer{
+    font-size: 1em;
+    background-color: #000000;
+    color: #ffffff;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+    p{
+        @include mobile{
+            font-size: .35em;
+            margin: 2em 0;
+        }
+    }
+    li{
+        @include mobile{
+            padding: .35em 0 1.35em 0;
+        }
+    }
+    ul li a{
+        font-weight: bold;
+        padding: 10px;
+        margin: 0 10px;
+        color: #ffffff;
+        background-color: transparent;
+        opacity: .8;
+        transition: .3s;
+        &:hover{
+            color: #FFFFFF;
+            opacity: 1;
+        }
+        @include pad{
+            font-size: .25em;
+        }
+        @include mobile{
+            font-size: .35em;
+            // padding: 20px 10px;
+        }
+    }
+  }

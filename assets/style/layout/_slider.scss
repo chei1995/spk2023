@@ -1,0 +1,432 @@
+.slider {
+	margin: 0 auto;
+	max-width: 100%;
+	.slider-text {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 4em ;
+		@include pad{
+			padding: 2em;
+		}
+		@include mobile{
+			padding: 2em;
+		}
+		h2, p{
+			color: white;
+			text-shadow: 0 0 3px #000;
+			margin: 0;
+		}
+		h2{
+			font-weight: 600;
+			margin: 0 0 .5em 0;
+			@include mobile{
+				font-size: 3em;
+			}
+			@include mobiles{
+				font-size: 2em;
+			}
+		}
+		p{
+			line-height: 1.5em;
+		}
+	}
+}
+.slider1, .slider4{
+	.slider-text {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 4em ;
+		@include mobile{ 
+			padding: 1.25em 4em;
+		}
+		h2, p{
+			color: white;
+			text-shadow: 0 0 3px #000;
+			margin: 0;
+		}
+		h2{
+			font-weight: 600;
+			margin: 0 0 .5em 0;
+			@include mobile{
+				font-size: 3em;
+			}
+			@include mobiles{
+				font-size: 2em;
+			}
+		}
+		p{
+			line-height: 1.5em;
+		}
+	}
+}
+.slider2{
+	.slide_viewer {
+		height: calc(#{$container-half} - 5px);
+		//new
+		@include mobile{
+			height: calc(#{$container} - 5px);
+		}
+	}
+}
+.slider3{
+	.slide_viewer {
+		height: calc(#{$container-half} - 5px);
+		//new
+		@include mobile{
+			height: calc(#{$container} - 5px);
+		}
+	}
+}
+.slider4{
+	.slide_viewer {
+		height: calc(#{$container-half} - 5px);
+		//new
+		// @include mobile{
+		// 	height: calc( 90vw - 5px);
+		// }
+	}
+}
+.slider5{
+	.slide_viewer {
+		height: calc(#{$container-half} - 5px);
+		
+		@include mobile{
+			height: calc(#{$container} - 5px);
+		}
+	}
+}
+.slider6{
+	.slide_viewer {
+		height: calc(#{$container-half} - 5px);
+		
+		@include mobile{
+			height: calc(#{$container} - 5px);
+		}
+	}
+}
+.slide_viewer {
+	height: $slider-height;
+	overflow: hidden;
+	position: relative;
+	@include mobile{
+		height: $slider-height-mb;
+	}
+}
+//FPGA的產品尺寸大小為 16:9 1920*1080
+.product-slider .slide_viewer {
+	height: calc(25vw - 17px);
+	@include mobile{
+		height: calc(51vw - 17px)
+	}
+}
+.slider-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 4em ;
+}
+.slide_group {
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+.slide {
+	display: none;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	object-fit: cover;
+	object-position: center center;
+	source,img{
+		object-fit: cover;
+		object-position: center center;
+	}
+	&:first-child {
+		display: block;
+	}
+	&:nth-of-type(1) {
+		content: "";
+		// background: #D7A151;
+        //background-image: url(https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+	}
+	&:nth-of-type(2) {
+		content: "";
+		// background: #F4E4CD;
+        //background-image: url(https://images.unsplash.com/photo-1495055154266-57bbdeada43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+	}
+	&:nth-of-type(3) {
+		content: "";
+		// background: #C75534;
+        //background-image: url(https://images.unsplash.com/photo-1593349480506-8433634cdcbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+	}
+	&:nth-of-type(4) {
+		content: "";
+		// background: #D1D1D4;
+        //background-image: url(https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80);
+	}
+}
+.product-slider .slide { 
+	&:first-child {
+		display: block;
+	}
+	&:nth-of-type(1) {
+		content: "";
+		// background: #D7A151;
+        //background-image: url(https://media.istockphoto.com/photos/sea-otter-british-columbia-picture-id507171882?b=1&k=20&m=507171882&s=170667a&w=0&h=j6RDmP-Gz0M9xG1JYPy8QMlXjdPCzOjFV_vi0GjvCyU=);
+	}
+	&:nth-of-type(2) {
+		content: "";
+		// background: #F4E4CD;
+        //background-image: url(https://images.unsplash.com/photo-1595703013566-db085ae93c04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80);
+	}
+	&:nth-of-type(3) {
+		content: "";
+		// background: #C75534;
+        //background-image: url(https://images.unsplash.com/photo-1597357821540-3dc1852ef417?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1113&q=80);
+	}
+	&:nth-of-type(4) {
+		content: "";
+		// background: #D1D1D4;
+        //background-image: url(https://images.unsplash.com/photo-1595854443827-9d1a1ae30f0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+	}
+}
+.slide_buttons {
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+	//80為menu寬高 48 是btn本身的高度
+    top: calc(#{$slider-height} + 80px - 48px);
+    z-index: 1;
+	@include mobile{
+		top: calc(#{$slider-height-mb} + 80px )
+	}
+}
+.slide_buttons_bus {
+    top: calc(#{$slider-height} + 160px - 85px);
+	@include mobile{
+		top: calc(40vw + 160px - 65px)
+	}
+}
+.slide_buttons_small {
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: calc(#{$container-half} - 55px);
+    z-index: 2;
+	@include mobile{
+		top: calc(#{$container-half} - 35px);
+		//new
+		top: calc(#{$container} - 55px);
+	} 
+}
+
+.slide_buttons_small_last {
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: calc(#{$container-half} - 55px);
+    z-index: 2;
+	@include mobile{
+	}
+	// a.slide_btn {
+	// 	@include mobile{
+	// 		font-size: 27px;
+	// 	}
+	// }
+}
+
+.product-slider .slide_buttons {
+	position: absolute;
+	top: calc(25vw - 17px);;
+	@include mobile{
+		top: calc(51vw - 17px)
+	}
+}
+a.slide_btn {
+	text-decoration: none;
+	color: #747474;
+	font-size: 42px;
+	margin: 0 0.175em;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.product-slider .slide_btn {
+	text-decoration: none;
+	color: #cccccc;
+	font-size: 42px;
+	margin: 0 0.175em;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.slide_btn.active {
+	color: #000000;
+	cursor: pointer;
+}
+.product-slider .slide_btn.active {
+	color: #000000;
+	cursor: pointer;
+}
+.slide_btn {
+	&:hover {
+		color: #000000;
+		cursor: pointer;
+	}
+}
+.product-slider .slide_btn {
+	&:hover {
+		color: #000000;
+		cursor: pointer;
+	}
+}
+.directional_nav {
+	// height: $slider-height;
+	height: 0;
+	margin: 0 auto;
+	width: 100%;
+    position: absolute;
+    top: calc(#{$slider-height-half} + 80px - 32.5px);
+	@include mobile{
+		// height: $slider-height-mb;
+		top: calc(#{$slider-height-mb-half} + 80px - 32.5px);
+	}
+}
+
+.directional_nav_bus {
+    top: calc(#{$slider-height-half} + 160px - 32.5px);
+	@include mobile{
+		top: calc(20vw + 135px - 32.5px)
+	}
+}
+.directional_nav_small {
+    top: calc(45vw / 2 - 5px  - 32.5px);
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    height: 0;
+	@include mobile{
+		//new
+		height: 0;
+		top: calc(#{$container-half} - 5px  - 32.5px);
+		// .previous_btn, .next_btn{
+		// 	width: 30px;
+		// 	height: 0;
+		// } 
+		// .previous_btn svg, .next_btn svg{
+		// 	height: 30px;
+		// 	width: 30px;
+		// } 
+	}
+}
+
+.directional_nav_small_last {
+	height: 0;
+    top: calc(22.5vw - 37.5px);
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+	// @include mobile{
+	// 	//new
+	// 	.previous_btn, .next_btn{
+	// 		width: 30px;
+	// 		height: 0;
+	// 	} 
+	// 	.previous_btn svg, .next_btn svg{
+	// 		height: 30px;
+	// 		width: 30px;
+	// 	} 
+	// }
+}
+.product-slider .directional_nav {
+	// height: $product-slider-height;
+	height: auto;
+    top: calc(12.5vw - 37.5px);
+	@include mobile{
+		top:calc(18.5vw - 8.5px);
+	}
+	.previous_btn svg, .next_btn svg{
+		height: auto;
+		filter: none;
+		// width: 110px;
+	
+	} 
+}
+//btn
+.previous_btn svg, .next_btn svg{
+    height: auto;
+	filter: drop-shadow(0px 0px 2px #000000);
+    // width: 110px;
+
+} 
+.slider-circle{
+    display: none;
+}
+.previous_btn {
+	bottom: 0;
+	// left: 100px;
+	// margin: auto;
+	// position: absolute;
+	top: 0;
+	cursor: pointer;
+	height: 65px;
+	opacity: 0.5;
+	-webkit-transition: opacity 0.4s ease-in-out;
+	-moz-transition: opacity 0.4s ease-in-out;
+	-ms-transition: opacity 0.4s ease-in-out;
+	-o-transition: opacity 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
+	width: 65px;
+	display: inline-block;
+	&:hover {
+		opacity: 1;
+	}
+}
+.next_btn {
+	bottom: 0;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	cursor: pointer;
+	display: inline-block;
+	height: 65px;
+	opacity: 0.5;
+	-webkit-transition: opacity 0.4s ease-in-out;
+	-moz-transition: opacity 0.4s ease-in-out;
+	-ms-transition: opacity 0.4s ease-in-out;
+	-o-transition: opacity 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
+	width: 65px;
+	&:hover {
+		opacity: 1;
+	}
+}
+.product-slider .next_btn{
+	position: absolute;
+	right: 30px;
+}
+@media only screen and (max-width: 767px) {
+	.previous_btn {
+		left: auto;
+	}
+}
+
+

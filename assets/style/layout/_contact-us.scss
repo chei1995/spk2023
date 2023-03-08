@@ -1,0 +1,185 @@
+.about-us,.legal-notice,.privacy-policy{
+    margin-bottom: 70px;
+    @include mobile{
+        margin-bottom: 0;
+    }
+}
+.contact-us{
+    background: #eee;
+    h2{
+        color: #777;
+        text-align: center;
+        font-weight: 600;
+    }
+    form{
+        span{
+            > label {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+    }
+}
+form{
+    span{
+        display: flex;
+        align-items: center;
+        @include mobile{
+            flex-wrap: wrap;
+        }
+    }
+    label, input, textarea{
+        margin-bottom: 1em;
+    }
+    label{
+        font-weight: 800;
+        &::before{
+            content: " * ";
+            color: rgb(197, 0, 0);
+        }
+    }
+    input,textarea{
+        background-color: $white;
+        border: 3px solid rgba(0, 0, 0, 0);
+        padding: .7em 0;
+        transition: .3s;
+        resize:none;
+        caret-color: gray;
+        letter-spacing: 1.1px;
+        &:focus{
+            outline: none;
+            border: 3px solid rgba(0, 0, 0, 0);
+            animation: PulseAttention 2.5s cubic-bezier(.215, .61, .355, 1) forwards infinite;
+        }
+        &::-ms-clear {
+            display: none;
+        
+        }
+        &::placeholder{
+            color: #ccc;
+        }
+        
+    }
+    textarea{
+        height: 200px;
+    }
+    button{
+        border-radius: 100px;
+        padding: .6em 1.5em;
+        margin: 0 2em;
+        border: none;
+        background: $white;
+        transition: .3s;
+        cursor: pointer;
+        @include mobile{
+            margin: 0 1em;
+        }
+        i{
+            padding-right: .3em;
+        }
+    }
+    [type="reset"]{
+        &:hover{
+            color: $white;
+            background: lighten($color: $sparkle-color, $amount: 60);
+        }
+        &:hover i {
+            transition: .3s;
+            animation: reset .2s cubic-bezier(.215, .61, .355, 1) forwards ;
+        }
+    }
+    [type="submit"]{
+        position: relative;
+        background-color: $sparkle-color;
+        color: $white;
+        &:hover{
+            color: #fff;
+        }
+        &:hover i {
+            animation: submit .5s cubic-bezier(.215, .61, .355, 1) forwards ;
+        }
+        // &:after{
+        //     position: absolute;
+        //     content: "";
+        //     bottom: 0;
+        //     left: 0;
+        //     width: 0%;
+        //     height: 10%;
+        //     background: #ffffff;
+        //     transition: all .35s;
+        // }
+        // &:hover:after{
+        //     width: 100%;
+        // }
+    }
+}
+.contact-us-success{
+    min-height: calc(100vh  - 200px);
+    i{ 
+        font-size: 250px;
+        line-height: 250px;
+        animation: mailSend 3s cubic-bezier(.215, .61, .355, 1) forwards;
+        animation-delay:0s;
+        // animation-iteration-count:infinite;
+        animation-duration: 1.3s;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
+    h2{ 
+        opacity: 0;
+        animation: mailH2 cubic-bezier(.215, .61, .355, 1) forwards;
+        animation-delay: 1.3s;
+        // animation-iteration-count:infinite;
+        animation-duration: 1.3s;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
+    p{ 
+        opacity: 0;
+        animation: mailH2 cubic-bezier(.215, .61, .355, 1) forwards;
+        animation-delay: 2s;
+        // animation-iteration-count:infinite;
+        animation-duration: 1.3s;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
+    a{ 
+        opacity: 0;
+        animation: mailH2 cubic-bezier(.215, .61, .355, 1) forwards;
+        animation-delay: 3s;
+        // animation-iteration-count:infinite;
+        animation-duration: 1.3s;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
+    @include pad{
+        margin-top: 200px;
+        min-height: calc(100vh  - 320px);
+        i{
+            font-size: 30vw;
+            line-height: 30vw;
+        }
+        h2{
+            font-size: 4em;
+            line-height: 2em;
+        }
+        p,a{
+            font-size: 2em; 
+            line-height: 1em;
+        }
+    
+
+    }
+    @include mobile{
+        margin-top: 180px;
+        min-height: calc(100vh  - 340px);
+        h2{
+            font-size: 3em;
+            line-height: 2em;
+        }
+        p{
+            font-size: 1.5em; 
+            line-height: .5em;
+        } 
+        a{
+            font-size: 1.5em; 
+            line-height: 2em;
+        }
+    }
+}
