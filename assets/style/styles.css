@@ -178,7 +178,7 @@ template {
 html {
   /* font-size: 20px; */
 }
-.wrapper.intel {
+.wrapper.intel .intel.businessTemplate{
   font-family: "Intel One Display Regular", Helvetica, Arial, sans-serif;
   font-weight: normal;
   /* font-size: 100%;
@@ -333,7 +333,7 @@ span.bold {
     font-size: 1.1em;
   }
 }
-.wrapper.intel h3 {
+.wrapper.intel h3,.intel.businessTemplate h3 {
   display: inline-block;
   margin: 0;
   font-family: "Intel One Display Bold", Helvetica, Arial, sans-serif;
@@ -341,13 +341,13 @@ span.bold {
   line-height: 1.2;
 }
 @media screen and (max-width: 1023px) {
-  .wrapper.intel h3 {
+  .wrapper.intel h3,.intel.businessTemplate h3 {
     font-size: 3.2em;
     line-height: 1.1;
   }
 }
 @media screen and (max-width: 765px) {
-  .wrapper.intel h3 {
+  .wrapper.intel h3,.intel.businessTemplate h3 {
     font-size: 1.5em;
   }
 }
@@ -391,20 +391,20 @@ span.bold {
     font-family: "Intel One Display Regular", Helvetica, Arial, sans-serif;
   }
 }
-.wrapper.intel p {
+.wrapper.intel p,.intel.businessTemplate p {
   font-family: "Intel One Display Regular", Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   line-height: normal;
   margin: 0;
 }
 @media screen and (max-width: 1023px) {
-  .wrapper.intel p {
+  .wrapper.intel p,.intel.businessTemplate p {
     font-size: 1.5em;
     line-height: 1.15;
   }
 }
 @media screen and (max-width: 765px) {
-  .wrapper.intel p {
+  .wrapper.intel p,.intel.businessTemplate p {
     font-size: 0.7em;
     line-height: 1.3;
   }
